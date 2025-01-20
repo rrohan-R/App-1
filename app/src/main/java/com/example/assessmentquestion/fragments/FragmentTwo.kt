@@ -35,9 +35,14 @@ class FragmentTwo :Fragment() {
         tabLayout = view.findViewById(R.id.tabLayout)
         val frag1 = ViewPagerFragment1()
         val frag2 = ViewPagerFragment2()
+
         val adapter = ViewPagerAdapter(this)
         adapter.addFragment(frag1, "TAB1")
         adapter.addFragment(frag2, "TAB2")
+
+        viewPager.adapter=adapter
+        viewPager.currentItem = 0
+        viewPager.offscreenPageLimit = 2
 
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             tab.text = adapter.getTabTitle(position)

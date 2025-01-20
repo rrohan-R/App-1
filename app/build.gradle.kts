@@ -53,7 +53,6 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.fragment.ktx)
     implementation(libs.androidx.recyclerview)
-    implementation(libs.play.services.ads.lite)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

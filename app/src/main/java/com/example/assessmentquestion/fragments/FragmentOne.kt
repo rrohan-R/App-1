@@ -8,13 +8,12 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.assessmentquestion.R
-import com.google.android.gms.ads.mediation.Adapter
+import com.example.assessmentquestion.recycler.MyAdapter
 
 class FragmentOne:Fragment() {
 
     private lateinit var mRecyclerView: RecyclerView
-    private var mAdapter: RecyclerView.Adapter =
-        com.example.assessmentquestion.recycler.Adapter(this)
+    private var mAdapter: MyAdapter=MyAdapter()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -31,12 +30,11 @@ class FragmentOne:Fragment() {
 
         mRecyclerView = view.findViewById(R.id.recyclerview)
 
-        mRecyclerView.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
+        mRecyclerView.layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
         //  mAdapter.setClickListener(this)
         mRecyclerView.adapter = mAdapter
 
     }
-
 
 
 }
