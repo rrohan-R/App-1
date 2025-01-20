@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_fragment_one"
+        android:icon="@drawable/ic_action_name"
+        android:title="Recycler-View" />
+
+    <item
+        android:id="@+id/nav_fragment_two"
+        android:icon="@drawable/ic_action_name2"
+        android:title="ViewPager" />
+
+</menu>
